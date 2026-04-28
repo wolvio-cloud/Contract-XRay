@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* D-EDGE semantic tokens */
+    --background: #f7f8fa;
+    --surface: #ffffff;
+    --foreground: #0a2342;
+    --muted: #4a5568;
+    --border: #e2e8f0;
+    --radius: 0.5rem;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Ensure monospace elements use JetBrains Mono */
+  code,
+  kbd,
+  samp,
+  pre {
+    @apply font-mono;
+  }
+}

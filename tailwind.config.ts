@@ -11,7 +11,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // D-EDGE brand palette
+        // D-EDGE brand — direct hex tokens
         navy: {
           DEFAULT: "#0A2342",
           50: "#E8EDF4",
@@ -25,7 +25,7 @@ const config: Config = {
           100: "#FAD9C9",
           600: "#D95520",
         },
-        // Semantic tokens
+        // Semantic tokens backed by CSS custom properties (set in globals.css)
         background: "var(--background)",
         surface: "var(--surface)",
         foreground: "var(--foreground)",
@@ -39,8 +39,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["Montserrat", "ui-sans-serif", "system-ui", "sans-serif"],
-        mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "monospace"],
+        // next/font injects --font-sans and --font-mono on <html>
+        sans: ["var(--font-sans)", "Montserrat", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "JetBrains Mono", "ui-monospace", "SFMono-Regular", "monospace"],
       },
       borderRadius: {
         lg: "var(--radius)",
